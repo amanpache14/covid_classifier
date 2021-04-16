@@ -65,6 +65,7 @@ def upload():
         f.save(file_path)
 
         # Make prediction
+        
         preds = model_predict(file_path, model)
         if preds[0][0] == 0:
             return str("COVID INFECTED")
